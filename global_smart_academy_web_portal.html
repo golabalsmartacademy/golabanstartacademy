@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOBAL SMART ACADEMY | Official School Website & Portal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Poppins & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0f2a4a',
+                            900: '#0a192f',
+                            950: '#050c1a'
+                        },
+                        skyblue: {
+                            400: '#38bdf8',
+                            500: '#0284c7',
+                            600: '#0369a1'
+                        },
+                        accent: {
+                            500: '#10b981',
+                            600: '#059669'
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Poppins', sans-serif; }
+        .glass-nav {
+            background: rgba(15, 42, 74, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .bus-pulse {
+            box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7);
+            animation: pulse-ring 1.8s infinite cubic-bezier(0.66, 0, 0, 1);
+        }
+        @keyframes pulse-ring {
+            to { box-shadow: 0 0 0 15px rgba(56, 189, 248, 0); }
+        }
+        .scanner-line {
+            animation: scan 2s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: 0%; }
+            50% { top: 100%; }
+            100% { top: 0%; }
+        }
+        /* Hide scrollbar for custom tabs */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-skyblue-500 selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-navy-950 text-slate-300 text-xs py-2 px-4 sm:px-8 border-b border-navy-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                <a href="tel:+919734025990" class="hover:text-skyblue-400 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-accent-500"></i> +91 9734025990
+                </a>
+                <span class="hidden sm:inline text-slate-600">|</span>
+                <span class="flex items-center gap-1.5 text-slate-300">
+                    <i class="fa-solid fa-location-dot text-amber-400"></i> Kachua (Babur Ali More), Matia, North 24 Parganas, WB
+                </span>
+            </div>
+            <div class="flex items-center gap-3 font-medium">
+                <span class="bg-accent-500/20 text-accent-500 border border-accent-500/30 px-2 py-0.5 rounded text-[11px] animate-pulse">
+                    <i class="fa-solid fa-bullhorn mr-1"></i> Admissions Open 2027
+                </span>
+                <a href="#admission" class="text-skyblue-400 hover:text-white transition underline underline-offset-2">Pre-Nursery to Class I</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-navy-800/80 text-white transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- BRAND LOGO -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-skyblue-500 to-navy-800 p-0.5 shadow-lg group-hover:scale-105 transition">
+                        <div class="w-full h-full bg-navy-900 rounded-[10px] flex items-center justify-center border border-white/20">
+                            <i class="fa-solid fa-graduation-cap text-2xl text-skyblue-400"></i>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-white leading-none group-hover:text-skyblue-400 transition">
+                            GLOBAL SMART ACADEMY
+                        </span>
+                        <span class="text-[10px] font-semibold text-accent-500 tracking-widest mt-1 uppercase">
+                            LEARN • LEAD • SUCCEED
+                        </span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAV -->
+                <nav class="hidden xl:flex items-center gap-6 text-sm font-medium">
+                    <a href="#about" class="hover:text-skyblue-400 transition py-1">About Us</a>
+                    <a href="#academics" class="hover:text-skyblue-400 transition py-1">Academics</a>
+                    <a href="#facilities" class="hover:text-skyblue-400 transition py-1">Facilities</a>
+                    <a href="#transport" class="hover:text-skyblue-400 transition py-1 text-skyblue-400 font-semibold flex items-center gap-1">
+                        <i class="fa-solid fa-bus text-xs"></i> Smart Transport
+                    </a>
+                    <a href="#package" class="hover:text-skyblue-400 transition py-1">Admission Kit</a>
+                    <a href="#portals" class="hover:text-skyblue-400 transition py-1 flex items-center gap-1">
+                        <i class="fa-solid fa-user-shield text-xs text-accent-500"></i> Portals
+                    </a>
+                    <a href="#contact" class="hover:text-skyblue-400 transition py-1">Contact</a>
+                </nav>
+
+                <!-- CTA & MOBILE TOGGLE -->
+                <div class="flex items-center gap-3">
+                    <button onclick="openAdmissionModal()" class="hidden sm:inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-emerald-700 text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 transition-all hover:-translate-y-0.5">
+                        <i class="fa-solid fa-file-pen"></i> Apply Online 2027
+                    </button>
+                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="xl:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-navy-800 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU OVERLAY -->
+        <div id="mobileMenu" class="hidden xl:hidden bg-navy-900 border-b border-navy-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-skyblue-400 border-b border-navy-800/50">About Us</a>
+            <a href="#academics" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-skyblue-400 border-b border-navy-800/50">Academics</a>
+            <a href="#facilities" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-skyblue-400 border-b border-navy-800/50">Facilities</a>
+            <a href="#transport" onclick="toggleMobileMenu()" class="block py-2 text-skyblue-400 font-medium border-b border-navy-800/50">Smart Transport & Safety</a>
+            <a href="#package" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-skyblue-400 border-b border-navy-800/50">₹10,000 Admission Kit</a>
+            <a href="#portals" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-skyblue-400 border-b border-navy-800/50">Portals (Parent/Teacher/Admin)</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-skyblue-400 border-b border-navy-800/50">Contact Us</a>
+            <div class="pt-2">
+                <button onclick="openAdmissionModal(); toggleMobileMenu();" class="w-full py-3 bg-accent-500 text-white font-semibold rounded-xl text-center shadow-md">
+                    Apply Online 2027 Now
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-b from-navy-900 via-navy-800 to-navy-950 text-white overflow-hidden py-16 lg:py-24">
+        <!-- Decorative Glow Backgrounds -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-skyblue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 right-10 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-navy-800/90 border border-skyblue-500/30 px-3.5 py-1.5 rounded-full text-xs sm:text-sm text-skyblue-400 font-medium shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-accent-500 animate-ping"></span>
+                        New International Standard English Medium Campus
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        A Brighter Future <br class="hidden sm:inline">
+                        <span class="bg-gradient-to-r from-skyblue-400 via-teal-300 to-accent-500 bg-clip-text text-transparent">
+                            Begins Here.
+                        </span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl font-light leading-relaxed mx-auto lg:mx-0">
+                        Empowering young minds in West Bengal with advanced digital learning, value-based pedagogy, smart interactive boards, mental arithmetic, and real-time QR student transport tracking.
+                    </p>
+
+                    <!-- Key Badges -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs sm:text-sm font-medium max-w-xl mx-auto lg:mx-0">
+                        <div class="bg-navy-800/60 border border-slate-700/60 p-3 rounded-xl flex items-center gap-2.5">
+                            <i class="fa-solid fa-child-reaching text-accent-500 text-xl"></i>
+                            <div class="text-left">
+                                <p class="text-slate-400 text-[10px] uppercase tracking-wider">Session 2027</p>
+                                <p class="text-white font-semibold">Pre-Nursery to Class I</p>
+                            </div>
+                        </div>
+                        <div class="bg-navy-800/60 border border-slate-700/60 p-3 rounded-xl flex items-center gap-2.5">
+                            <i class="fa-solid fa-gift text-amber-400 text-xl"></i>
+                            <div class="text-left">
+                                <p class="text-slate-400 text-[10px] uppercase tracking-wider">Admission Fee</p>
+                                <p class="text-white font-semibold">₹10,000/- (All-In Kit)</p>
+                            </div>
+                        </div>
+                        <div class="bg-navy-800/60 border border-slate-700/60 p-3 rounded-xl flex items-center gap-2.5 col-span-2 sm:col-span-1">
+                            <i class="fa-solid fa-shield-halved text-skyblue-400 text-xl"></i>
+                            <div class="text-left">
+                                <p class="text-slate-400 text-[10px] uppercase tracking-wider">Child Safety</p>
+                                <p class="text-white font-semibold">Live GPS & QR Alerts</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call To Action -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <button onclick="openAdmissionModal()" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-emerald-700 text-white font-bold rounded-xl shadow-xl shadow-accent-500/20 hover:shadow-accent-500/40 transition transform hover:-translate-y-0.5 text-center">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Online Admission 2027
+                        </button>
+                        <a href="#transport" class="w-full sm:w-auto px-7 py-3.5 bg-navy-800/80 hover:bg-navy-800 border border-slate-700 text-slate-200 hover:text-white font-semibold rounded-xl transition text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-route text-skyblue-400"></i> Smart Transport Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right Card Simulation -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md bg-gradient-to-b from-navy-800 to-navy-950 p-6 rounded-2xl border border-slate-700 shadow-2xl">
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-skyblue-500/20 flex items-center justify-center text-skyblue-400 font-bold border border-skyblue-500/40">
+                                    GSA
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-semibold text-white">Smart Student ID Card</h3>
+                                    <p class="text-[11px] text-slate-400">Next-Gen Attendance & Bus Safety</p>
+                                </div>
+                            </div>
+                            <span class="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] px-2 py-0.5 rounded font-mono">ACTIVE</span>
+                        </div>
+
+                        <!-- Mock ID Card Preview -->
+                        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 space-y-4">
+                            <div class="flex items-center gap-4">
+                                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=200" alt="Student Photo" class="w-16 h-16 rounded-xl object-cover border-2 border-skyblue-400 shadow-md">
+                                <div class="space-y-1 text-xs">
+                                    <p class="font-bold text-white text-sm">Ayan Chakraborty</p>
+                                    <p class="text-slate-300"><span class="text-slate-500">ID:</span> GSA-2027-0104</p>
+                                    <p class="text-slate-300"><span class="text-slate-500">Class:</span> UKG (Section A)</p>
+                                    <p class="text-slate-300"><span class="text-slate-500">Route:</span> Route #1 (Kachua Express)</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-navy-950 p-3 rounded-lg flex items-center justify-between border border-navy-800">
+                                <div class="space-y-0.5 text-left">
+                                    <p class="text-[10px] text-slate-400 uppercase font-semibold">Live Status</p>
+                                    <p class="text-xs text-emerald-400 font-medium flex items-center gap-1">
+                                        <i class="fa-solid fa-circle-check"></i> Safely Exited Bus #01
+                                    </p>
+                                </div>
+                                <!-- QR Mock -->
+                                <div class="bg-white p-1 rounded shadow-inner">
+                                    <i class="fa-solid fa-qrcode text-2xl text-slate-900"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+                            <span><i class="fa-solid fa-bell text-amber-400 mr-1"></i> WhatsApp Parent Notification Active</span>
+                            <span class="text-slate-500 font-mono">08:15 AM</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ADMISSION PACKAGE HIGHLIGHT (₹10,000 PACKAGE) -->
+    <section id="package" class="py-16 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-emerald-300">
+                    Transparent Educational Investment
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-navy-900 mt-3">
+                    ONE ADMISSION PACKAGE – EVERYTHING YOUR CHILD NEEDS TO BEGIN!
+                </h2>
+                <p class="text-slate-600 mt-3 text-sm sm:text-base">
+                    At Global Smart Academy, we believe in full transparency. Our initial Admission Fee of <strong class="text-navy-900 font-bold">₹10,000/-</strong> includes a complete, high-quality starter kit so parents face zero hassle on Day One.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden p-6 sm:p-10">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Kit Item 1 -->
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-skyblue-400 transition">
+                        <div class="w-12 h-12 rounded-xl bg-skyblue-500/10 text-skyblue-600 flex items-center justify-center shrink-0 text-xl font-bold">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-navy-900 text-base">1. School Uniform Set</h3>
+                            <p class="text-slate-500 text-xs mt-1">Premium quality, comfortable tailored school uniform pair for daily classes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Kit Item 2 -->
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-skyblue-400 transition">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0 text-xl font-bold">
+                            <i class="fa-solid fa-person-running"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-navy-900 text-base">2. Physical Training (P.T.) Dress</h3>
+                            <p class="text-slate-500 text-xs mt-1">Flexible sportswear for games, yoga, outdoor sports, and physical development activities.</p>
+                        </div>
+                    </div>
+
+                    <!-- Kit Item 3 -->
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-skyblue-400 transition">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0 text-xl font-bold">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-navy-900 text-base">3. Official School Tie</h3>
+                            <p class="text-slate-500 text-xs mt-1">Smart customary necktie giving students a polished, disciplined international appearance.</p>
+                        </div>
+                    </div>
+
+                    <!-- Kit Item 4 -->
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-skyblue-400 transition">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center shrink-0 text-xl font-bold">
+                            <i class="fa-solid fa-id-badge"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-navy-900 text-base">4. School Logo & Crest Badge</h3>
+                            <p class="text-slate-500 text-xs mt-1">Embroidered crest and smart QR-enabled Student Identity Card for security.</p>
+                        </div>
+                    </div>
+
+                    <!-- Kit Item 5 -->
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-skyblue-400 transition">
+                        <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 flex items-center justify-center shrink-0 text-xl font-bold">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-navy-900 text-base">5. Complete Textbooks</h3>
+                            <p class="text-slate-500 text-xs mt-1">Complete set of approved English medium curriculum textbooks and phonics guides.</p>
+                        </div>
+                    </div>
+
+                    <!-- Kit Item 6 -->
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-skyblue-400 transition">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center shrink-0 text-xl font-bold">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-navy-900 text-base">6. Notebooks & Workbooks</h3>
+                            <p class="text-slate-500 text-xs mt-1">High-grade customized school exercise notebooks, drawing books, and practice pads.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4 bg-navy-900 text-white p-6 rounded-xl">
+                    <div class="text-xs sm:text-sm text-slate-300 max-w-2xl">
+                        <p class="font-semibold text-amber-400 mb-1"><i class="fa-solid fa-circle-info mr-1"></i> Fee Transparency Clarification:</p>
+                        The ₹10,000 Admission Fee covers registration, admission charge, and the complete starter kit listed above. Monthly tuition fee and optional transport charges are billed separately according to approved school bylaws.
+                    </div>
+                    <button onclick="downloadFeeStructure()" class="shrink-0 px-5 py-2.5 bg-skyblue-500 hover:bg-skyblue-600 text-white font-semibold text-xs sm:text-sm rounded-lg transition flex items-center gap-2">
+                        <i class="fa-solid fa-download"></i> Fee Structure PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOUNDER & DIRECTOR MESSAGE -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Director Photo Box -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-sm rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100 group">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600" alt="Mufti Abdul Matin - Founder & Director" class="w-full h-96 object-cover object-top group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-900/30 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="font-heading font-extrabold text-xl">Mufti Abdul Matin</h3>
+                            <p class="text-xs text-skyblue-400 font-medium">Founder & Director, Global Smart Academy</p>
+                            <p class="text-[11px] text-slate-300 mt-1"><i class="fa-solid fa-location-dot text-accent-500 mr-1"></i> Kachua, North 24 Parganas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Director Text Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-skyblue-600 bg-skyblue-50 px-3 py-1 rounded-full">
+                        Leadership & Vision
+                    </div>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-navy-900 leading-tight">
+                        Inspiring Excellence, Character & Modern Wisdom
+                    </h2>
+                    
+                    <blockquote class="text-slate-600 italic border-l-4 border-skyblue-500 pl-4 py-1 text-sm sm:text-base">
+                        "Education is not merely the acquisition of facts, but the training of the mind to think critically, act morally, and contribute meaningfully to society."
+                    </blockquote>
+
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Welcome to <strong>GLOBAL SMART ACADEMY</strong>. Our mission is to establish an elite English Medium educational institution right here in North 24 Parganas, bridging the gap between world-class technology and deep-rooted moral values. 
+                    </p>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        From smart interactive classrooms and mental arithmetic (Abacus) to live GPS transport tracking and student safety QR systems, every detail at Global Smart Academy is engineered to nurture confident, compassionate, and future-ready leaders.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                            <p class="font-bold text-navy-900 text-sm">Vision</p>
+                            <p class="text-slate-500 text-xs mt-0.5">Empower rural & semi-urban talent with global standard education.</p>
+                        </div>
+                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                            <p class="font-bold text-navy-900 text-sm">Child Safety</p>
+                            <p class="text-slate-500 text-xs mt-0.5">100% transparent tracking, verified staff, and secure premises.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SMART SCHOOL TRANSPORT MANAGEMENT (INTERACTIVE SIMULATOR) -->
+    <section id="transport" class="py-16 bg-navy-950 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="bg-skyblue-500/20 text-skyblue-400 border border-skyblue-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    <i class="fa-solid fa-location-crosshairs mr-1"></i> Flagship Feature
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-3">
+                    Smart Transport & Live Parent Notification System
+                </h2>
+                <p class="text-slate-300 mt-3 text-sm sm:text-base">
+                    Every school vehicle is equipped with hardware GPS tracking and student QR Code scanners. Parents receive automated instant notifications for boarding & alighting.
+                </p>
+            </div>
+
+            <!-- Features Cards Grid -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-navy-900 border border-navy-800 p-6 rounded-2xl hover:border-skyblue-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-skyblue-500/20 text-skyblue-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">1. Live GPS Bus Tracking</h3>
+                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+                        Parents can log into the Parent Portal to monitor real-time vehicle movement on Google Maps, estimated time of arrival (ETA), and route status.
+                    </p>
+                </div>
+
+                <div class="bg-navy-900 border border-navy-800 p-6 rounded-2xl hover:border-accent-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-accent-500/20 text-accent-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">2. Student QR Code Verification</h3>
+                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+                        Authorized conductors scan student QR ID cards upon entry and exit. Ensures no child is left behind or dropped at the wrong stop.
+                    </p>
+                </div>
+
+                <div class="bg-navy-900 border border-navy-800 p-6 rounded-2xl hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-comment-sms"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">3. Instant Entry & Exit Alerts</h3>
+                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+                        Automated triggers push immediate alerts to parents' mobile devices (WhatsApp/SMS) the exact second their child boards or exits the bus.
+                    </p>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE TRANSPORT DEMO SIMULATOR -->
+            <div class="bg-navy-900 border border-slate-700 rounded-2xl overflow-hidden shadow-2xl">
+                <div class="bg-navy-800 px-6 py-4 border-b border-slate-700 flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                        <span class="text-xs font-mono text-slate-300 ml-2">Interactive Transport Live Console v2.0</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs text-slate-400">Select Route Demo:</span>
+                        <select id="routeSelect" onchange="updateBusSimulator()" class="bg-navy-950 text-xs text-white border border-slate-700 rounded-lg px-3 py-1.5 focus:outline-none focus:border-skyblue-400">
+                            <option value="1">Route #01: Kachua -> Matia -> Basirhat Rd</option>
+                            <option value="2">Route #02: Deganga -> Loknath Mandir -> Campus</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="p-6 grid lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Left: Interactive Mock GPS Map -->
+                    <div class="lg:col-span-7 bg-navy-950 border border-slate-800 rounded-xl p-4 relative min-h-[320px] flex flex-col justify-between">
+                        
+                        <!-- Header Overlay -->
+                        <div class="flex items-center justify-between text-xs z-10 bg-navy-900/90 p-2.5 rounded-lg border border-slate-800">
+                            <div>
+                                <span class="text-slate-400">Vehicle No:</span>
+                                <span id="simVehicleNo" class="font-bold text-white ml-1">WB-24-AK-8890</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400">Driver:</span>
+                                <span id="simDriver" class="font-semibold text-skyblue-400 ml-1">Rafiqul Islam</span>
+                            </div>
+                            <span class="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded text-[10px] font-mono">LIVE GPS CONNECTED</span>
+                        </div>
+
+                        <!-- Graphical Mock Map Path -->
+                        <div class="my-8 relative px-4">
+                            <!-- Route Line -->
+                            <div class="h-2 bg-slate-800 rounded-full w-full relative">
+                                <div id="simProgressBar" class="h-full bg-gradient-to-r from-skyblue-500 to-accent-500 rounded-full transition-all duration-700" style="width: 60%;"></div>
+                            </div>
+
+                            <!-- Stops -->
+                            <div class="flex justify-between items-center -mt-3.5 relative text-center">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-500 border-2 border-white flex items-center justify-center text-[9px] font-bold">1</div>
+                                    <span class="text-[10px] text-slate-400 mt-1 font-medium">Depot</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div id="stop2Node" class="w-5 h-5 rounded-full bg-emerald-500 border-2 border-white flex items-center justify-center text-[9px] font-bold">2</div>
+                                    <span id="stop2Name" class="text-[10px] text-slate-300 mt-1 font-medium">Matia Station</span>
+                                </div>
+                                <div class="flex flex-col items-center relative">
+                                    <!-- Animated Moving Bus Marker -->
+                                    <div class="absolute -top-7 text-skyblue-400 text-lg animate-bounce">
+                                        <i class="fa-solid fa-bus-simple"></i>
+                                    </div>
+                                    <div class="w-5 h-5 rounded-full bg-skyblue-400 border-2 border-white bus-pulse"></div>
+                                    <span id="stop3Name" class="text-[10px] text-skyblue-400 font-bold mt-1">Babur Ali More</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="w-5 h-5 rounded-full bg-slate-700 border-2 border-slate-600 text-slate-400 flex items-center justify-center text-[9px]">4</div>
+                                    <span class="text-[10px] text-slate-500 mt-1">Academy Gate</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer Map Info -->
+                        <div class="grid grid-cols-3 gap-2 text-center text-xs bg-navy-900/80 p-3 rounded-lg border border-slate-800">
+                            <div>
+                                <p class="text-slate-400 text-[10px]">Speed</p>
+                                <p id="simSpeed" class="font-bold text-white text-sm">32 km/h</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-400 text-[10px]">ETA Campus</p>
+                                <p id="simEta" class="font-bold text-accent-400 text-sm">08:22 AM</p>
+                            </div>
+                            <div>
+                                <p class="text-slate-400 text-[10px]">Onboard</p>
+                                <p id="simOnboard" class="font-bold text-skyblue-400 text-sm">18 Students</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Interactive QR Scanner Simulation & Alert Log -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="bg-navy-950 border border-slate-800 rounded-xl p-4">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center justify-between">
+                                <span><i class="fa-solid fa-qrcode text-accent-500 mr-1.5"></i> Live QR Scan Test Terminal</span>
+                                <span class="text-[10px] text-slate-500">Interactive</span>
+                            </h4>
+
+                            <!-- Trigger QR Scan Buttons -->
+                            <div class="grid grid-cols-2 gap-2 mb-4">
+                                <button onclick="triggerScanSimulation('ENTRY')" class="py-2 px-3 bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/40 text-emerald-400 text-xs font-semibold rounded-lg transition text-center flex items-center justify-center gap-1.5">
+                                    <i class="fa-solid fa-right-to-bracket"></i> Scan ENTRY
+                                </button>
+                                <button onclick="triggerScanSimulation('EXIT')" class="py-2 px-3 bg-sky-600/20 hover:bg-sky-600/30 border border-sky-500/40 text-sky-400 text-xs font-semibold rounded-lg transition text-center flex items-center justify-center gap-1.5">
+                                    <i class="fa-solid fa-right-from-bracket"></i> Scan EXIT
+                                </button>
+                            </div>
+
+                            <!-- Live Notification Triggered Box -->
+                            <div id="notificationAlertBox" class="bg-slate-900 border border-slate-800 p-3 rounded-lg text-xs space-y-2">
+                                <div class="flex items-center justify-between text-slate-400 border-b border-slate-800 pb-1 text-[11px]">
+                                    <span><i class="fa-brands fa-whatsapp text-emerald-500 mr-1"></i> Parent Alert Log</span>
+                                    <span id="alertTime" class="font-mono text-slate-500">Just Now</span>
+                                </div>
+                                <p id="alertMessage" class="text-slate-200 leading-relaxed font-mono text-[11px]">
+                                    "Dear Parent, your child <strong class="text-emerald-400">Ayan Chakraborty</strong> has boarded School Bus <strong class="text-skyblue-400">WB-24-AK-8890</strong> at <strong class="text-amber-400">08:14 AM</strong>."
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="text-[11px] text-slate-400 bg-navy-800/50 p-3 rounded-xl border border-navy-800 leading-relaxed">
+                            <i class="fa-solid fa-circle-check text-emerald-400 mr-1"></i> <strong>Zero-Error Hardware Rule:</strong> Real system utilizes physical scanning devices connected to encrypted cloud REST APIs. No simulated false locations are displayed to guardians.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ADVANCED LEARNING FACILITIES -->
+    <section id="facilities" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="bg-skyblue-100 text-skyblue-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    World-Class Educational Infrastructure
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-navy-900 mt-3">
+                    Modern Smart Learning Facilities
+                </h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">
+                    Combining interactive digital tools, mental arithmetic, phonics, activity-based science, and holistic personality development.
+                </p>
+            </div>
+
+            <!-- Facility Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                
+                <!-- Facility Item -->
+                <div class="bg-white p-4 rounded-xl border border-slate-200 hover:border-skyblue-400 hover:shadow-lg transition text-center space-y-2 group">
+                    <div class="w-12 h-12 rounded-xl bg-skyblue-50 text-skyblue-600 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition">
+                        <i class="fa-solid fa-tv"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-xs sm:text-sm">Smart Interactive Board</h3>
+                    <p class="text-[11px] text-slate-500">Audio-visual animated modern lessons.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 hover:border-accent-500 hover:shadow-lg transition text-center space-y-2 group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-xs sm:text-sm">Abacus Programme</h3>
+                    <p class="text-[11px] text-slate-500">Speed mental arithmetic & brain agility.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 hover:border-amber-500 hover:shadow-lg transition text-center space-y-2 group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-xs sm:text-sm">English Phonics & Speech</h3>
+                    <p class="text-[11px] text-slate-500">Fluency, pronunciation & conversation.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 hover:border-purple-500 hover:shadow-lg transition text-center space-y-2 group">
+                    <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-xs sm:text-sm">Computer Awareness</h3>
+                    <p class="text-[11px] text-slate-500">Early digital literacy & keyboard skills.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 hover:border-rose-500 hover:shadow-lg transition text-center space-y-2 group">
+                    <div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-xs sm:text-sm">Art, Craft & Creativity</h3>
+                    <p class="text-[11px] text-slate-500">Motor skills & imaginative painting.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 hover:border-indigo-500 hover:shadow-lg transition text-center space-y-2 group">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition">
+                        <i class="fa-solid fa-shapes"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-xs sm:text-sm">Activity Pedagogy</h3>
+                    <p class="text-[11px] text-slate-500">Hands-on practical learning games.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 hover:border-teal-500 hover:shadow-lg transition text-center space-y-2 group">
+                    <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition">
+                        <i class="fa-solid fa-vial"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-xs sm:text-sm">Science Corner</h3>
+                    <p class="text-[11px] text-slate-500">Basic nature & environmental discovery.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 hover:border-orange-500 hover:shadow-lg transition text-center space-y-2 group">
+                    <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition">
+                        <i class="fa-solid fa-futbol"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-xs sm:text-sm">Indoor & Outdoor Games</h3>
+                    <p class="text-[11px] text-slate-500">Physical training, games & agility.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 hover:border-cyan-500 hover:shadow-lg transition text-center space-y-2 group">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-xs sm:text-sm">Library Corner</h3>
+                    <p class="text-[11px] text-slate-500">Storybooks & child reading habits.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 hover:border-emerald-500 hover:shadow-lg transition text-center space-y-2 group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-xs sm:text-sm">Health & Hygiene</h3>
+                    <p class="text-[11px] text-slate-500">Sanitisation, clean drinking water & habits.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 hover:border-yellow-500 hover:shadow-lg transition text-center space-y-2 group">
+                    <div class="w-12 h-12 rounded-xl bg-yellow-50 text-yellow-600 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-xs sm:text-sm">Moral & Values</h3>
+                    <p class="text-[11px] text-slate-500">Ethical grounding, respect & discipline.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 hover:border-blue-500 hover:shadow-lg transition text-center space-y-2 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl mx-auto group-hover:scale-110 transition">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-xs sm:text-sm">Personality Growth</h3>
+                    <p class="text-[11px] text-slate-500">Stage confidence & public expression.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ACADEMIC PROGRAMMES (INTERACTIVE TABS) -->
+    <section id="academics" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="bg-accent-500/10 text-accent-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Comprehensive Curriculum
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-navy-900 mt-3">
+                    Academic Programmes (Session 2027)
+                </h2>
+                <p class="text-slate-600 mt-2 text-sm">
+                    Structured foundational learning for initial classes. <em class="text-navy-900 font-semibold">(Future expansion to Class II onwards in subsequent sessions).</em>
+                </p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex items-center justify-start md:justify-center gap-2 overflow-x-auto no-scrollbar pb-4 mb-8">
+                <button onclick="switchClassTab('prenursery')" id="tab-prenursery" class="class-tab px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition shrink-0 bg-navy-900 text-white shadow-md">
+                    Pre-Nursery
+                </button>
+                <button onclick="switchClassTab('nursery')" id="tab-nursery" class="class-tab px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition shrink-0 bg-slate-100 text-slate-700 hover:bg-slate-200">
+                    Nursery
+                </button>
+                <button onclick="switchClassTab('lkg')" id="tab-lkg" class="class-tab px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition shrink-0 bg-slate-100 text-slate-700 hover:bg-slate-200">
+                    LKG
+                </button>
+                <button onclick="switchClassTab('ukg')" id="tab-ukg" class="class-tab px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition shrink-0 bg-slate-100 text-slate-700 hover:bg-slate-200">
+                    UKG
+                </button>
+                <button onclick="switchClassTab('class1')" id="tab-class1" class="class-tab px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition shrink-0 bg-slate-100 text-slate-700 hover:bg-slate-200">
+                    Class I
+                </button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div id="classContent" class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+                <!-- Content inserted via JavaScript -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ONLINE ADMISSION SYSTEM & MODAL TRIGGER SECTION -->
+    <section id="admission" class="py-16 bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-7 space-y-4">
+                    <span class="bg-amber-400/20 text-amber-300 border border-amber-400/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Enroll Your Child Today
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                        Online Admission Portal - Academic Session 2027
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Seats are limited to maintain an optimal teacher-student ratio and personalized child care. Submit your online application in under 3 minutes to secure your seat.
+                    </p>
+                    
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-200">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-accent-500"></i> Instant Unique Application ID Generation.
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-accent-500"></i> Clear ₹10,000 All-Inclusive Starter Kit allocation.
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-accent-500"></i> Instant Mobile Confirmation & Admin Verification.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-5 bg-white text-slate-800 p-6 sm:p-8 rounded-2xl shadow-2xl space-y-4">
+                    <h3 class="font-heading font-extrabold text-xl text-navy-900">Apply for Admission 2027</h3>
+                    <p class="text-xs text-slate-500">Fill out the quick online form below or launch the full application modal.</p>
+                    
+                    <form onsubmit="handleQuickAdmission(event)" class="space-y-3">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Student's Full Name *</label>
+                            <input type="text" id="qStudentName" required placeholder="e.g. Aarav Roy" class="w-full text-xs px-3 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-skyblue-500 focus:outline-none">
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Applying Class *</label>
+                                <select id="qClass" required class="w-full text-xs px-3 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-skyblue-500 focus:outline-none">
+                                    <option value="Pre-Nursery">Pre-Nursery</option>
+                                    <option value="Nursery">Nursery</option>
+                                    <option value="LKG">LKG</option>
+                                    <option value="UKG">UKG</option>
+                                    <option value="Class I">Class I</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Mobile (+91) *</label>
+                                <input type="tel" id="qMobile" required pattern="[0-9]{10}" placeholder="10 Digit Number" class="w-full text-xs px-3 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-skyblue-500 focus:outline-none">
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-accent-500 hover:bg-accent-600 text-white font-bold text-xs sm:text-sm rounded-lg transition shadow-md">
+                            Submit Admission Application
+                        </button>
+                    </form>
+
+                    <div class="text-center pt-2 border-t border-slate-100">
+                        <button onclick="openAdmissionModal()" class="text-xs font-semibold text-skyblue-600 hover:text-skyblue-700 underline">
+                            Need multi-step detailed form? Click here
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MULTI-ROLE PORTALS INTERACTIVE DEMO (PARENT / TEACHER / ADMIN) -->
+    <section id="portals" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="bg-navy-900 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Integrated EdTech Ecosystem
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-navy-900 mt-3">
+                    Multi-Role School Management Portals
+                </h2>
+                <p class="text-slate-600 mt-2 text-sm">
+                    Interactive live preview of our Parent Portal, Teacher Terminal, and Admin Control Hub.
+                </p>
+            </div>
+
+            <!-- Portal Switcher Tabs -->
+            <div class="flex justify-center gap-3 mb-8">
+                <button onclick="switchPortalTab('parent')" id="ptab-parent" class="portal-tab px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition bg-navy-900 text-white shadow">
+                    <i class="fa-solid fa-user-group mr-1.5"></i> Parent Portal
+                </button>
+                <button onclick="switchPortalTab('teacher')" id="ptab-teacher" class="portal-tab px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition bg-white text-slate-700 border border-slate-300 hover:bg-slate-50">
+                    <i class="fa-solid fa-chalkboard-user mr-1.5"></i> Teacher Portal
+                </button>
+                <button onclick="switchPortalTab('admin')" id="ptab-admin" class="portal-tab px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition bg-white text-slate-700 border border-slate-300 hover:bg-slate-50">
+                    <i class="fa-solid fa-user-shield mr-1.5"></i> Admin Control Hub
+                </button>
+            </div>
+
+            <!-- Portal Container -->
+            <div id="portalContainer" class="bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden">
+                <!-- Portal View Rendered via JavaScript -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MEDIA GALLERY & NOTICE BOARD -->
+    <section class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Left: Notice Board -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+                        <h3 class="font-heading font-extrabold text-xl text-navy-900 flex items-center gap-2">
+                            <i class="fa-solid fa-bullhorn text-accent-500"></i> School Notice Board
+                        </h3>
+                        <span class="text-xs font-semibold text-skyblue-600">Session 2027</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        
+                        <!-- Notice 1 -->
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-skyblue-400 transition space-y-1">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">ADMISSION</span>
+                                <span class="text-[11px] text-slate-400 font-mono">Nov 15, 2026</span>
+                            </div>
+                            <h4 class="font-bold text-navy-900 text-sm">Admission Session 2027 Prospectus Release</h4>
+                            <p class="text-xs text-slate-500">Online forms are active for Pre-Nursery to Class I. Early registration kit reservation recommended.</p>
+                        </div>
+
+                        <!-- Notice 2 -->
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-skyblue-400 transition space-y-1">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-sky-100 text-sky-800 text-[10px] font-bold px-2 py-0.5 rounded">TRANSPORT</span>
+                                <span class="text-[11px] text-slate-400 font-mono">Nov 10, 2026</span>
+                            </div>
+                            <h4 class="font-bold text-navy-900 text-sm">Smart Transport Route Allocation</h4>
+                            <p class="text-xs text-slate-500">Parents opting for school transport can verify route coverage and QR ID tag issuance details.</p>
+                        </div>
+
+                        <!-- Notice 3 -->
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-skyblue-400 transition space-y-1">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded">EVENT</span>
+                                <span class="text-[11px] text-slate-400 font-mono">Nov 02, 2026</span>
+                            </div>
+                            <h4 class="font-bold text-navy-900 text-sm">Parent Orientation Program Schedule</h4>
+                            <p class="text-xs text-slate-500">Interactive orientation session on modern teaching methodology and child progress tracking.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right: Campus Gallery Preview -->
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+                        <h3 class="font-heading font-extrabold text-xl text-navy-900 flex items-center gap-2">
+                            <i class="fa-solid fa-images text-skyblue-500"></i> Campus & Life Gallery
+                        </h3>
+                        <span class="text-xs font-semibold text-slate-500">Modern Facilities</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <div class="relative group overflow-hidden rounded-xl bg-slate-100 h-36">
+                            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&q=80&w=400" alt="Smart Classroom" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition p-3 flex items-end">
+                                <span class="text-white text-xs font-medium">Smart Digital Classrooms</span>
+                            </div>
+                        </div>
+
+                        <div class="relative group overflow-hidden rounded-xl bg-slate-100 h-36">
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=400" alt="Abacus Activity" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition p-3 flex items-end">
+                                <span class="text-white text-xs font-medium">Abacus & Arithmetic</span>
+                            </div>
+                        </div>
+
+                        <div class="relative group overflow-hidden rounded-xl bg-slate-100 h-36">
+                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=400" alt="School Library" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition p-3 flex items-end">
+                                <span class="text-white text-xs font-medium">Reading & Story Corner</span>
+                            </div>
+                        </div>
+
+                        <div class="relative group overflow-hidden rounded-xl bg-slate-100 h-36">
+                            <img src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&q=80&w=400" alt="Activity Games" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition p-3 flex items-end">
+                                <span class="text-white text-xs font-medium">Activity & Outdoor Play</span>
+                            </div>
+                        </div>
+
+                        <div class="relative group overflow-hidden rounded-xl bg-slate-100 h-36">
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=400" alt="Phonics Speech" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition p-3 flex items-end">
+                                <span class="text-white text-xs font-medium">Language Lab</span>
+                            </div>
+                        </div>
+
+                        <div class="relative group overflow-hidden rounded-xl bg-slate-100 h-36">
+                            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=400" alt="Child Safety" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition p-3 flex items-end">
+                                <span class="text-white text-xs font-medium">Smart Transport & Safety</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & LOCATION SECTION -->
+    <section id="contact" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold text-accent-500 uppercase tracking-wider">Get In Touch</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">Campus Location & Contact</h2>
+                        <p class="text-slate-400 text-sm mt-2">Visit our campus or connect with our admission desk.</p>
+                    </div>
+
+                    <div class="space-y-4 text-sm text-slate-300">
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-xl bg-navy-800 text-skyblue-400 flex items-center justify-center shrink-0 border border-slate-800">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <strong class="block text-white">Academy Campus Address:</strong>
+                                Kachua (Babur Ali More), Adjacent to Loknath Mandir, Matia, North 24 Parganas, West Bengal, India.
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-xl bg-navy-800 text-emerald-400 flex items-center justify-center shrink-0 border border-slate-800">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <strong class="block text-white">Official Helpline & Helpline:</strong>
+                                <a href="tel:+919734025990" class="text-skyblue-400 hover:underline">+91 9734025990</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-xl bg-navy-800 text-amber-400 flex items-center justify-center shrink-0 border border-slate-800">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <strong class="block text-white">Founder & Director:</strong>
+                                Mufti Abdul Matin
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Action Buttons -->
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <a href="https://wa.me/919734025990" target="_blank" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm rounded-xl transition flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Direct WhatsApp
+                        </a>
+                        <a href="tel:+919734025990" class="px-5 py-2.5 bg-navy-800 hover:bg-navy-700 text-white font-semibold text-xs sm:text-sm rounded-xl border border-slate-700 transition flex items-center gap-2">
+                            <i class="fa-solid fa-phone-flip text-skyblue-400"></i> Click to Call
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact & Enquiry Form -->
+                <div class="lg:col-span-7 bg-navy-800 border border-slate-700 p-6 sm:p-8 rounded-2xl shadow-xl">
+                    <h3 class="font-heading font-extrabold text-xl text-white mb-2">Send Admission Enquiry</h3>
+                    <p class="text-xs text-slate-400 mb-6">Have questions regarding admission, transport routes, or fees? Fill out the form below.</p>
+
+                    <form onsubmit="handleEnquirySubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name *</label>
+                                <input type="text" required placeholder="Parent / Guardian Name" class="w-full text-xs bg-navy-950 text-white px-3.5 py-2.5 border border-slate-700 rounded-lg focus:ring-2 focus:ring-skyblue-400 focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Mobile Number *</label>
+                                <input type="tel" required pattern="[0-9]{10}" placeholder="10 Digit Mobile" class="w-full text-xs bg-navy-950 text-white px-3.5 py-2.5 border border-slate-700 rounded-lg focus:ring-2 focus:ring-skyblue-400 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Child's Class</label>
+                                <select class="w-full text-xs bg-navy-950 text-white px-3.5 py-2.5 border border-slate-700 rounded-lg focus:ring-2 focus:ring-skyblue-400 focus:outline-none">
+                                    <option>Pre-Nursery</option>
+                                    <option>Nursery</option>
+                                    <option>LKG</option>
+                                    <option>UKG</option>
+                                    <option>Class I</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Locality / Address</label>
+                                <input type="text" placeholder="e.g. Matia / Basirhat" class="w-full text-xs bg-navy-950 text-white px-3.5 py-2.5 border border-slate-700 rounded-lg focus:ring-2 focus:ring-skyblue-400 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Message / Questions</label>
+                            <textarea rows="3" placeholder="Enter any specific queries regarding transport, prospectus, or fees..." class="w-full text-xs bg-navy-950 text-white px-3.5 py-2.5 border border-slate-700 rounded-lg focus:ring-2 focus:ring-skyblue-400 focus:outline-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3 bg-skyblue-500 hover:bg-skyblue-600 text-white font-bold text-xs sm:text-sm rounded-xl transition shadow-lg">
+                            Send Enquiry Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL ARCHITECTURE & SECURITY DISCLOSURE SECTION -->
+    <section class="py-12 bg-navy-950 text-slate-400 text-xs border-t border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <div class="flex items-center gap-2 text-slate-200 font-bold text-sm">
+                <i class="fa-solid fa-code text-skyblue-400"></i> Technical Architecture & Child Data Safeguards
+            </div>
+            <p class="leading-relaxed">
+                Global Smart Academy operates a modern cloud backend with role-based access control (RBAC). Transport GPS and QR scanning API modules connect securely through HTTPS REST endpoints. Sensitive guardian details, home addresses, and live bus positions are protected with AES encryption and restricted exclusively to verified guardians via authenticated login sessions.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 text-slate-400 text-xs py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="text-center md:text-left space-y-1">
+                    <p class="text-slate-200 font-bold text-sm">GLOBAL SMART ACADEMY</p>
+                    <p>Tagline: <strong class="text-accent-500">LEARN • LEAD • SUCCEED</strong> | Founder & Director: Mufti Abdul Matin</p>
+                    <p class="text-[11px] text-slate-500">Academic Session 2027 | English Medium | Kachua (Babur Ali More), Matia, WB</p>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-4 text-[11px]">
+                    <a href="#" onclick="showPolicy('privacy')" class="hover:text-white transition">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#" onclick="showPolicy('child')" class="hover:text-white transition">Child Protection Policy</a>
+                    <span>•</span>
+                    <a href="#" onclick="showPolicy('fee')" class="hover:text-white transition">Fee & Refund Policy</a>
+                    <span>•</span>
+                    <a href="#" onclick="showPolicy('terms')" class="hover:text-white transition">Terms & Conditions</a>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-800 text-center text-[11px] text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <p>© 2027 GLOBAL SMART ACADEMY. All Rights Reserved.</p>
+                <p>Designed for Excellence in Education Technology.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DETAILED MULTI-STEP ADMISSION MODAL -->
+    <div id="admissionModal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white text-slate-800 rounded-2xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl my-8 border border-slate-200">
+            <button onclick="closeAdmissionModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="mb-6">
+                <span class="bg-skyblue-100 text-skyblue-800 text-[10px] font-bold px-2.5 py-0.5 rounded uppercase tracking-wider">
+                    Official Application Form
+                </span>
+                <h3 class="font-heading font-extrabold text-2xl text-navy-900 mt-1">
+                    Student Admission Form 2027
+                </h3>
+                <p class="text-xs text-slate-500">Complete all required details to generate your registration ID.</p>
+            </div>
+
+            <form onsubmit="handleFullAdmissionSubmit(event)" class="space-y-4">
+                
+                <!-- Section 1: Student Details -->
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold text-navy-900 uppercase tracking-wider border-b border-slate-200 pb-1">1. Student Details</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Student Full Name *</label>
+                            <input type="text" id="mStudentName" required placeholder="Full name of child" class="w-full text-xs px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-skyblue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Date of Birth *</label>
+                            <input type="date" id="mDob" required class="w-full text-xs px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-skyblue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Gender *</label>
+                            <select id="mGender" required class="w-full text-xs px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-skyblue-500 focus:outline-none">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Applying Class *</label>
+                            <select id="mClass" required class="w-full text-xs px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-skyblue-500 focus:outline-none">
+                                <option value="Pre-Nursery">Pre-Nursery</option>
+                                <option value="Nursery">Nursery</option>
+                                <option value="LKG">LKG</option>
+                                <option value="UKG">UKG</option>
+                                <option value="Class I">Class I</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Parent & Contact Details -->
+                <div class="space-y-3 pt-2">
+                    <h4 class="text-xs font-bold text-navy-900 uppercase tracking-wider border-b border-slate-200 pb-1">2. Parent & Address Details</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Father's Name *</label>
+                            <input type="text" id="mFather" required placeholder="Father's full name" class="w-full text-xs px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-skyblue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Mother's Name *</label>
+                            <input type="text" id="mMother" required placeholder="Mother's full name" class="w-full text-xs px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-skyblue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Guardian Mobile Number *</label>
+                            <input type="tel" id="mPhone" required pattern="[0-9]{10}" placeholder="10 Digit Number" class="w-full text-xs px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-skyblue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Previous School (If Any)</label>
+                            <input type="text" id="mPrevSchool" placeholder="Name of previous play school" class="w-full text-xs px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-skyblue-500 focus:outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Full Residential Address *</label>
+                        <textarea id="mAddress" required rows="2" placeholder="Full address with pin code" class="w-full text-xs px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-skyblue-500 focus:outline-none"></textarea>
+                    </div>
+                </div>
+
+                <!-- Section 3: Package Summary -->
+                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-xs space-y-1">
+                    <p class="font-bold text-navy-900">Admission Fee Package Summary:</p>
+                    <p class="text-slate-600">Admission Package Amount: <strong class="text-emerald-600">₹10,000/-</strong> (Includes Uniform, P.T. Dress, Tie, Crest Badge, Textbooks & Notebooks).</p>
+                </div>
+
+                <div class="pt-3 flex gap-3">
+                    <button type="button" onclick="closeAdmissionModal()" class="w-1/3 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold text-xs rounded-xl transition">
+                        Cancel
+                    </button>
+                    <button type="submit" class="w-2/3 py-2.5 bg-accent-500 hover:bg-accent-600 text-white font-bold text-xs sm:text-sm rounded-xl transition shadow-lg">
+                        Submit & Generate ID
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- SUCCESS CONFIRMATION MODAL -->
+    <div id="successModal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 text-center shadow-2xl space-y-4">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="font-heading font-extrabold text-2xl text-navy-900">Application Submitted!</h3>
+            <p class="text-xs text-slate-600">Thank you for registering with Global Smart Academy.</p>
+
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs text-left space-y-2">
+                <div class="flex justify-between">
+                    <span class="text-slate-500">Application ID:</span>
+                    <strong id="resAppId" class="text-skyblue-600 font-mono font-bold">GSA-2027-8492</strong>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-500">Student Name:</span>
+                    <strong id="resName" class="text-navy-900">---</strong>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-500">Class Applied:</span>
+                    <strong id="resClass" class="text-navy-900">---</strong>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-500">Admission Fee:</span>
+                    <strong class="text-emerald-600 font-bold">₹10,000/- (Kit Included)</strong>
+                </div>
+            </div>
+
+            <p class="text-[11px] text-slate-500">Our admission desk will verify your details and send SMS/WhatsApp confirmation to your mobile number.</p>
+
+            <button onclick="closeSuccessModal()" class="w-full py-2.5 bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs rounded-xl transition">
+                Close & Return to Home
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT CONTROLLERS -->
+    <script>
+        // --- 1. MOBILE MENU TOGGLE ---
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // --- 2. ACADEMIC CLASS TAB DATA & SWITCHER ---
+        const classData = {
+            prenursery: {
+                title: "Pre-Nursery Programme (Age 2.5 - 3.5 Years)",
+                desc: "A warm, joyful sensory-rich environment focusing on social skills, language foundation, and basic coordination.",
+                subjects: ["Sensory & Motor Skill Activities", "Phonics Sounds & Rhymes", "Basic Color & Shape Identification", "Moral Value Stories"],
+                methodology: "Play-way and activity-based learning without heavy textbook burden.",
+                assessment: "Continuous observational progress report focusing on emotional and physical milestones."
+            },
+            nursery: {
+                title: "Nursery Programme (Age 3.5 - 4.5 Years)",
+                desc: "Fostering curiosity, vocabulary development, initial pencil holding, and basic numerical recognition.",
+                subjects: ["English Alphabet & Sight Words", "Number Readiness (1-20)", "Bengali / Hindi Oral Awareness", "Art, Craft & Clay Modeling"],
+                methodology: "Smart Board interactive stories, song-based memory drills, and motor development.",
+                assessment: "Term-wise qualitative progress assessment without stress exams."
+            },
+            lkg: {
+                title: "Lower Kindergarten (LKG) (Age 4.5 - 5.5 Years)",
+                desc: "Building structured reading, writing, early mental math, and structured physical exercise.",
+                subjects: ["English Phonics & Short Sentences", "Mathematics (Counting & Shapes)", "Environmental Studies (EVS)", "Computer Awareness & Games"],
+                methodology: "Blended learning with digital smart boards and manipulative Abacus tools.",
+                assessment: "Formative periodic reviews and creative project assignments."
+            },
+            ukg: {
+                title: "Upper Kindergarten (UKG) (Age 5.5 - 6.5 Years)",
+                desc: "Preparing young learners for formal schooling with fluent reading, mental arithmetic, and environmental awareness.",
+                subjects: ["English Reading & Creative Writing", "Mathematics & Abacus Mental Arithmetic", "EVS & Science Corner", "Vernacular (Bengali/Hindi)", "Computer & General Knowledge"],
+                methodology: "Activity-oriented inquiry learning and group communication exercises.",
+                assessment: "Structured evaluation reports highlighting problem-solving and language fluency."
+            },
+            class1: {
+                title: "Class I Primary Programme (Age 6+ Years)",
+                desc: "Standard international elementary curriculum encouraging logical thinking, computer skills, and character development.",
+                subjects: ["English Literature & Grammar", "Mathematics & Abacus", "Environmental Studies (EVS)", "Vernacular (Bengali/Hindi)", "Computer Studies", "GK, Art & Physical Education"],
+                methodology: "Interactive smart board lectures, practical lab demonstrations, and moral value discussions.",
+                assessment: "Comprehensive evaluation through periodic unit tests, oral expression, and annual assessments."
+            }
+        };
+
+        function switchClassTab(key) {
+            // Update active button state
+            document.querySelectorAll('.class-tab').forEach(btn => {
+                btn.className = "class-tab px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition shrink-0 bg-slate-100 text-slate-700 hover:bg-slate-200";
+            });
+            const activeBtn = document.getElementById(`tab-${key}`);
+            if (activeBtn) {
+                activeBtn.className = "class-tab px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition shrink-0 bg-navy-900 text-white shadow-md";
+            }
+
+            // Render Content
+            const data = classData[key];
+            const contentBox = document.getElementById('classContent');
+            contentBox.innerHTML = `
+                <div class="space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-3">
+                        <h3 class="font-heading font-extrabold text-xl text-navy-900">${data.title}</h3>
+                        <span class="bg-accent-500/20 text-accent-600 border border-accent-500/30 text-xs font-bold px-3 py-1 rounded-full">Approved Curriculum</span>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed">${data.desc}</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 space-y-2">
+                            <h4 class="font-bold text-xs text-navy-900 uppercase tracking-wider text-skyblue-600"><i class="fa-solid fa-book-open mr-1"></i> Key Subjects & Learning Scope</h4>
+                            <ul class="space-y-1.5 text-xs text-slate-600">
+                                ${data.subjects.map(s => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-500 text-[10px]"></i> ${s}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 space-y-2">
+                            <h4 class="font-bold text-xs text-navy-900 uppercase tracking-wider text-skyblue-600"><i class="fa-solid fa-chalkboard-teacher mr-1"></i> Teaching & Assessment Method</h4>
+                            <p class="text-xs text-slate-600"><strong>Methodology:</strong> ${data.methodology}</p>
+                            <p class="text-xs text-slate-600"><strong>Assessment System:</strong> ${data.assessment}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initialize Academic Tab
+        switchClassTab('prenursery');
+
+        // --- 3. TRANSPORT ROUTE SIMULATOR CONTROLLER ---
+        const routeData = {
+            "1": {
+                vehicle: "WB-24-AK-8890",
+                driver: "Rafiqul Islam",
+                speed: "32 km/h",
+                eta: "08:22 AM",
+                onboard: "18 Students",
+                stop2: "Matia Station",
+                stop3: "Babur Ali More",
+                progress: "60%"
+            },
+            "2": {
+                vehicle: "WB-24-AK-9012",
+                driver: "Subhash Mondal",
+                speed: "28 km/h",
+                eta: "08:35 AM",
+                onboard: "22 Students",
+                stop2: "Loknath Mandir",
+                stop3: "Kachua Crossing",
+                progress: "40%"
+            }
+        };
+
+        function updateBusSimulator() {
+            const selected = document.getElementById('routeSelect').value;
+            const data = routeData[selected];
+            
+            document.getElementById('simVehicleNo').innerText = data.vehicle;
+            document.getElementById('simDriver').innerText = data.driver;
+            document.getElementById('simSpeed').innerText = data.speed;
+            document.getElementById('simEta').innerText = data.eta;
+            document.getElementById('simOnboard').innerText = data.onboard;
+            document.getElementById('stop2Name').innerText = data.stop2;
+            document.getElementById('stop3Name').innerText = data.stop3;
+            document.getElementById('simProgressBar').style.width = data.progress;
+        }
+
+        function triggerScanSimulation(type) {
+            const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            const vehicle = document.getElementById('simVehicleNo').innerText;
+            const alertBox = document.getElementById('notificationAlertBox');
+            const alertMessage = document.getElementById('alertMessage');
+            const alertTime = document.getElementById('alertTime');
+
+            alertTime.innerText = time;
+            if (type === 'ENTRY') {
+                alertMessage.innerHTML = `"Dear Parent, your child <strong class="text-emerald-400">Ayan Chakraborty</strong> has boarded School Bus <strong class="text-skyblue-400">${vehicle}</strong> at <strong class="text-amber-400">${time}</strong>."`;
+            } else {
+                alertMessage.innerHTML = `"Dear Parent, your child <strong class="text-skyblue-400">Ayan Chakraborty</strong> has safely exited School Bus <strong class="text-skyblue-400">${vehicle}</strong> at <strong class="text-amber-400">${time}</strong>."`;
+            }
+
+            alertBox.classList.add('animate-pulse');
+            setTimeout(() => alertBox.classList.remove('animate-pulse'), 1000);
+        }
+
+        // --- 4. PORTAL TABS SWITCHER (PARENT / TEACHER / ADMIN) ---
+        function switchPortalTab(type) {
+            document.querySelectorAll('.portal-tab').forEach(btn => {
+                btn.className = "portal-tab px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition bg-white text-slate-700 border border-slate-300 hover:bg-slate-50";
+            });
+            document.getElementById(`ptab-${type}`).className = "portal-tab px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition bg-navy-900 text-white shadow";
+
+            const container = document.getElementById('portalContainer');
+
+            if (type === 'parent') {
+                container.innerHTML = `
+                    <div class="p-6 space-y-6">
+                        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4">
+                            <div class="flex items-center gap-3">
+                                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=150" alt="Student" class="w-12 h-12 rounded-full object-cover border-2 border-skyblue-500">
+                                <div>
+                                    <h4 class="font-bold text-navy-900 text-base">Parent Portal: Welcome, Guardian of Ayan</h4>
+                                    <p class="text-xs text-slate-500">Student ID: GSA-2027-0104 | Class: UKG (Section A)</p>
+                                </div>
+                            </div>
+                            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full"><i class="fa-solid fa-circle text-[8px] mr-1"></i> Live Active Session</span>
+                        </div>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                                <p class="text-slate-400 text-[10px] uppercase font-bold">Attendance Rate</p>
+                                <p class="text-xl font-extrabold text-navy-900 mt-1">96.5%</p>
+                                <p class="text-[10px] text-emerald-600 mt-0.5"><i class="fa-solid fa-arrow-up"></i> Regular Student</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                                <p class="text-slate-400 text-[10px] uppercase font-bold">Bus ETA Today</p>
+                                <p class="text-xl font-extrabold text-skyblue-600 mt-1">08:22 AM</p>
+                                <p class="text-[10px] text-slate-500 mt-0.5">Route #01 (WB-24-AK-8890)</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                                <p class="text-slate-400 text-[10px] uppercase font-bold">Latest Exam Grade</p>
+                                <p class="text-xl font-extrabold text-amber-500 mt-1">A+ Grade</p>
+                                <p class="text-[10px] text-slate-500 mt-0.5">Abacus & Oral Test</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                                <p class="text-slate-400 text-[10px] uppercase font-bold">Fee Clearance</p>
+                                <p class="text-xl font-extrabold text-emerald-600 mt-1">ALL CLEARED</p>
+                                <p class="text-[10px] text-slate-500 mt-0.5">Receipt #GSA-REC-901</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                            <h5 class="font-bold text-xs text-navy-900 uppercase tracking-wider mb-2">Recent Transport Entry/Exit Activity</h5>
+                            <div class="space-y-2 text-xs">
+                                <div class="flex justify-between items-center p-2 bg-white rounded border border-slate-200">
+                                    <span><i class="fa-solid fa-bus text-emerald-500 mr-2"></i> Boarded Route #01 at Matia Station</span>
+                                    <span class="font-mono text-slate-500">Today, 08:14 AM</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2 bg-white rounded border border-slate-200">
+                                    <span><i class="fa-solid fa-door-open text-skyblue-500 mr-2"></i> Safely Dropped at Academy Gate</span>
+                                    <span class="font-mono text-slate-500">Yesterday, 02:10 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (type === 'teacher') {
+                container.innerHTML = `
+                    <div class="p-6 space-y-6">
+                        <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-base">Teacher Portal: Class UKG (Section A)</h4>
+                                <p class="text-xs text-slate-500">Assigned Teacher: Syeda Rahima Banu | Subject: English & Phonics</p>
+                            </div>
+                            <span class="bg-skyblue-100 text-skyblue-800 text-xs font-bold px-3 py-1 rounded-full">Class Teacher</span>
+                        </div>
+
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
+                            <div class="flex items-center justify-between">
+                                <h5 class="font-bold text-xs text-navy-900 uppercase tracking-wider">Today's Class Attendance Marker</h5>
+                                <button onclick="alert('Attendance Marked for Class UKG!')" class="px-3 py-1 bg-accent-500 hover:bg-accent-600 text-white text-xs font-bold rounded">Save Attendance</button>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+                                <div class="bg-white p-2.5 rounded border border-slate-200 flex items-center justify-between">
+                                    <span>Ayan Chakraborty</span>
+                                    <span class="text-emerald-600 font-bold">PRESENT</span>
+                                </div>
+                                <div class="bg-white p-2.5 rounded border border-slate-200 flex items-center justify-between">
+                                    <span>Fatima Zohra</span>
+                                    <span class="text-emerald-600 font-bold">PRESENT</span>
+                                </div>
+                                <div class="bg-white p-2.5 rounded border border-slate-200 flex items-center justify-between">
+                                    <span>Rohan Das</span>
+                                    <span class="text-rose-500 font-bold">ABSENT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = `
+                    <div class="p-6 space-y-6">
+                        <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-base">Admin Dashboard & Fleet Management</h4>
+                                <p class="text-xs text-slate-500">Global Smart Academy Management System</p>
+                            </div>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-bold px-3 py-1 rounded-full">Super Admin Access</span>
+                        </div>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                            <div class="p-4 rounded-xl bg-navy-900 text-white">
+                                <p class="text-slate-400 text-[10px] uppercase font-bold">Total Applications</p>
+                                <p class="text-2xl font-extrabold text-skyblue-400 mt-1">142</p>
+                                <p class="text-[10px] text-slate-400 mt-0.5">Session 2027</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-navy-900 text-white">
+                                <p class="text-slate-400 text-[10px] uppercase font-bold">Active Buses</p>
+                                <p class="text-2xl font-extrabold text-emerald-400 mt-1">04 Fleet Units</p>
+                                <p class="text-[10px] text-slate-400 mt-0.5">GPS Monitored</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-navy-900 text-white">
+                                <p class="text-slate-400 text-[10px] uppercase font-bold">Today's QR Scans</p>
+                                <p class="text-2xl font-extrabold text-amber-400 mt-1">284 Scans</p>
+                                <p class="text-[10px] text-slate-400 mt-0.5">100% Verified</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-navy-900 text-white">
+                                <p class="text-slate-400 text-[10px] uppercase font-bold">Admission Kits Issued</p>
+                                <p class="text-2xl font-extrabold text-purple-400 mt-1">118 Kits</p>
+                                <p class="text-[10px] text-slate-400 mt-0.5">₹10,000 All-In Kit</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Initialize Portal
+        switchPortalTab('parent');
+
+        // --- 5. MODALS & FORMS CONTROLLERS ---
+        function openAdmissionModal() {
+            document.getElementById('admissionModal').classList.remove('hidden');
+        }
+
+        function closeAdmissionModal() {
+            document.getElementById('admissionModal').classList.add('hidden');
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.add('hidden');
+        }
+
+        function handleQuickAdmission(e) {
+            e.preventDefault();
+            const name = document.getElementById('qStudentName').value;
+            const className = document.getElementById('qClass').value;
+            showSuccess(name, className);
+        }
+
+        function handleFullAdmissionSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('mStudentName').value;
+            const className = document.getElementById('mClass').value;
+            closeAdmissionModal();
+            showSuccess(name, className);
+        }
+
+        function showSuccess(name, className) {
+            const randomId = "GSA-2027-" + Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('resAppId').innerText = randomId;
+            document.getElementById('resName').innerText = name;
+            document.getElementById('resClass').innerText = className;
+            document.getElementById('successModal').classList.remove('hidden');
+        }
+
+        function handleEnquirySubmit(e) {
+            e.preventDefault();
+            alert("Thank you! Your enquiry has been received. Our admission desk (+91 9734025990) will contact you shortly.");
+        }
+
+        function downloadFeeStructure() {
+            alert("Downloading Official Global Smart Academy Fee Structure & Admission Guidelines (PDF)...");
+        }
+
+        function showPolicy(type) {
+            alert("Displaying Global Smart Academy Mandatory Policy Document: " + type.toUpperCase() + " POLICY.");
+        }
+    </script>
+</body>
+</html>
